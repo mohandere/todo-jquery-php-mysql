@@ -73,7 +73,7 @@ function save_todos( $user_id ){
 
 	global $db;
 
-	if ( isset( $_POST['todos'] ) && ! empty( $_POST['action'] ) ){
+	if ( !isset( $_POST['todos'] ) && empty( $_POST['action'] ) ){
 		return 0;
 	}
 
