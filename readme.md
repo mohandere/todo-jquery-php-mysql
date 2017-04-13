@@ -35,6 +35,6 @@ To run on local try with mamp/xampp/wamp/lamp...etc software
 
 ### Credit
 
-Thanks to [TodoMVC](todomvc.com) for creating jquery version of Todo.
-Thanks to [Micah Carrick](https://github.com/Quixotix/PHP-MySQL-Database-Class/blob/master/mysqldatabase.php) for PHP MySQL Database Class.
+- Thanks to [TodoMVC](todomvc.com) for creating jquery version of Todo.
+- Thanks to [Micah Carrick](https://github.com/Quixotix/PHP-MySQL-Database-Class/blob/master/mysqldatabase.php) for PHP MySQL Database Class.
 
