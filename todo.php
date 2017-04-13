@@ -26,9 +26,9 @@ if ( empty( $_REQUEST['action'] ) ){
 
 
 
-require_once(__ROOT__.'/db-config.php');
-require_once(__ROOT__.'/mysqlresultset.php');
-require_once(__ROOT__.'/mysql-db.php');
+require_once(__ROOT__.'/includes/db-config.php');
+require_once(__ROOT__.'/includes/mysqlresultset.php');
+require_once(__ROOT__.'/includes/mysql-db.php');
 
 global $db;
 $db = MySqlDatabase::getInstance();
