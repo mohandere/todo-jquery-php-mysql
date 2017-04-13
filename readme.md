@@ -17,6 +17,7 @@ Mysql db stores todos of user, using ajax for GET/POST. Mysql needs connected be
 
 After successful connection you can use follwing file to create a dummy database using follwing steps
 
+- Edit file <code>/includes/dump-sql.php</code> and change sql quries as you want.
 - Type in browser <code>localhost/todo-jquery-php-mysql/includes/dump-sql.php</code>
 - Hit enter
 
@@ -27,7 +28,7 @@ To run on local try with mamp/xampp/wamp/lamp...etc software
 
 - Start php server
 - Start mysql server
-- Place downloaded folder in <code>www/htdocs</code> web directory
+- Place downloaded <code>todo-jquery-php-mysql</code> folder in <code>www/htdocs</code> web directory
 - Type in browser <code>localhost/todo-jquery-php-mysql</code>
 - Hit enter
 
