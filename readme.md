@@ -11,7 +11,7 @@ Mysql db stores todos of user, using ajax for GET/POST. Mysql needs connected be
 
 > To create dummy db
 
-- type in browser 'localhost/todo-jquery-php-mysql/dump-sql.php'
+- type in browser <code>localhost/todo-jquery-php-mysql/dump-sql.php</code>
 - hit enter
 
 
@@ -19,8 +19,8 @@ Mysql db stores todos of user, using ajax for GET/POST. Mysql needs connected be
 
 - Start php server
 - Start mysql server
-- Place downloaded folder in 'www/htdocs' web directory
-- type in browser 'localhost/todo-jquery-php-mysql'
+- Place downloaded folder in <code>www/htdocs</code> web directory
+- type in browser <code>localhost/todo-jquery-php-mysql</code>
 - hit enter
 
 
