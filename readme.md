@@ -2,18 +2,18 @@
 
 Mysql db stores todos of user, using ajax for GET/POST. Mysql needs connected before runing this app.
 
-### DB Schema
+### DB Schema -
 
 #### Tables
 
-# user (id, first_name, last_name, email)
-# todo (id, user_id, title, completed, date_time)
+1. user (id, first_name, last_name, email)
+2. todo (id, user_id, title, completed, date_time)
 
 #### DB connection
 
 - Edit file <code>localhost/todo-jquery-php-mysql/includes/db-config.php</code> file and change constant DB_NAME, DB_USER, DB_PASSWORD, DB_HOST
 
-####  To create dummy db
+####  To create dummy db -
 
 After successful connection you can use follwing file to create a dummy database using follwing steps
 
