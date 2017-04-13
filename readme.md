@@ -1,4 +1,4 @@
-# ToDo App using jQuery, php, Mysql
+# ToDo app using jQuery, php, Mysql
 
 Mysql db stores todos of user, using ajax for GET/POST. Mysql needs connected before runing this app.
 
