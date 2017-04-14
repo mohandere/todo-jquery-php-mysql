@@ -52,7 +52,7 @@ function get_todos( $user_id ){
 	global $db;
 
 	$todo = [];
-	$query = "SELECT * FROM todos.todo";
+	$query = "SELECT * FROM ". DB_NAME .".todo";
 	// iterate as objects
 	foreach ($db->iterate($query) as $row) {
 		array_push( $todo, array(
@@ -78,7 +78,7 @@ function save_todos( $user_id ){
 	}
 
 	// Delete all old records first
-	$query = "TRUNCATE todos.todo";
+	$query = "TRUNCATE ". DB_NAME .".todo";
 	$db->delete($query);
 
 	foreach ( $_POST['todos'] as $key => $todo ) {

@@ -17,7 +17,7 @@ $db = MySqlDatabase::getInstance();
 
 // connect
 try {
-		// $db->connect('localhost', 'username', 'password', 'database_name');
+    // $db->connect('localhost', 'username', 'password', 'database_name');
     $db->connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
 }
 catch (Exception $e) {

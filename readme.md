@@ -7,6 +7,8 @@ Mysql db stores todos of user, using ajax for GET/POST. Mysql needs connected be
 
 ### DB Schema -
 
+Create an empty database first like say `todos` and then you can generate dummy data by running file <code>localhost/todo-jquery-php-mysql/includes/dump-sql.php</code> in your browser as mentinoned below -
+
 #### Tables
 
 1. user (id, first_name, last_name, email)
