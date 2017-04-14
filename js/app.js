@@ -2,6 +2,10 @@
 jQuery(function ($) {
 	'use strict';
 
+	//use browser local storage instead of db by making this falg on
+	var useLocalStorage = true;
+
+
 	Handlebars.registerHelper('eq', function (a, b, options) {
 		return a === b ? options.fn(this) : options.inverse(this);
 	});
@@ -56,9 +60,8 @@ jQuery(function ($) {
 
 	var App = {
 		init: function (todos) {
-			console.log(todos);
-			this.todos = todos; //UTIL.store('todos-jquery');
 
+			this.todos = todos;
 			this.todoTemplate = Handlebars.compile($('#todo-template').html());
 			this.footerTemplate = Handlebars.compile($('#footer-template').html());
 			this.bindEvents();
@@ -88,10 +91,14 @@ jQuery(function ($) {
 			$('#toggle-all').prop('checked', this.getActiveTodos().length === 0);
 			this.renderFooter();
 			$('#new-todo').focus();
-			//UTIL.store('todos-jquery', this.todos);
-			UTIL.dbStore('todos-jquery', {
-				todos: this.todos
-			});
+
+			if(useLocalStorage){
+				UTIL.store('todos-jquery', this.todos);
+			} else {
+				UTIL.dbStore('todos-jquery', {
+					todos: this.todos
+				});
+			}
 		},
 		renderFooter: function () {
 			var todoCount = this.todos.length;
@@ -213,15 +220,20 @@ jQuery(function ($) {
 		}
 	};
 
-	UTIL.dbStore('todos-jquery').done(function(result) {
-		result = $.parseJSON(result);
-		var todos = result.data;
-		$.each(todos, function(index, val) {
-			val.completed = parseInt(val.completed);
-		});
+	if(useLocalStorage){
+			var todos = UTIL.store('todos-jquery');
+			App.init(todos);
+	} else {
+		UTIL.dbStore('todos-jquery').done(function(result) {
+			result = $.parseJSON(result);
+			var todos = result.data;
+			$.each(todos, function(index, val) {
+				val.completed = parseInt(val.completed);
+			});
 
-		App.init(todos);
-  });
+			App.init(todos);
+	  });
+	}
 
 
 });

@@ -27,6 +27,17 @@ After successful connection you can use follwing file to create a dummy database
 - Hit enter
 
 
+### Local Storage instead of DB
+
+- There is an option for you to use browser local storage instead of db
+
+To use local storage  -
+
+- by default <code>var useLocalStorage = true;</code>
+- Edit file <code>/js/app.js</code> and change variable <code>useLocalStorage</code> value to <code>true/false</code>.
+- thats it!!!
+
+
 ### To run app
 
 To run on local try with mamp/xampp/wamp/lamp...etc software
