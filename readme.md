@@ -1,4 +1,4 @@
-# ToDo app using jQuery, php, Mysql/local storage
+# ToDo app using jQuery, php, Mysql/browser local storage
 
 ![demo](https://github.com/mohandere/todo-jquery-php-mysql/blob/master/img/demo.png)
 
